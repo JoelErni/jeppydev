@@ -74,15 +74,18 @@
         <section id="kontakt">
             <div id="chat">
                 <div class="messages">
-                    <h1>Hallo, wie kann ich helfen?</h1>
+                    <div>
+                        <h1>Wie kann ich helfen?</h1>
+                    </div>
                 </div>
-                <div class="messages">
-                    <h1>Hallo, wie kann ich helfen?</h1>
-                </div>
-                <div class="messages">
-                    <h1>Hallo, wie kann ich helfen?</h1>
-                </div>
+            </div>
+            <div id="input-field">
+                <form id="input">
+                    <input id="user-input" type="text">
+                    <input type="button" id="send" value="SENDEN" onclick="chat_send()">
+                </form>
             </div>
         </section>
     </body>
+    <script src="chat.js"></script>
 </html>

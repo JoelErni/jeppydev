@@ -30,6 +30,7 @@ header {
   padding: 1em;
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 article {
@@ -114,24 +115,44 @@ article {
   font-size: 6em;
 }
 
+#kontakt {
+  padding: 1.5em;
+  position: relative;
+}
+
 #kontakt > div {
   margin-top: 10em;
 }
 
 .messages {
   margin: 1em;
+  text-transform: uppercase;
+  overflow: auto;
 }
 
-#chat div:nth-child(odd) {
+.messages div {
+  margin-bottom: 1em;
+}
+
+#chat {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 70vh;
+  padding: 1em;
+}
+
+#chat > div:nth-child(odd) > div {
+  float: left;
   border: black solid 0.25em;
   border-radius: 1em;
-  display: inline-block;
   padding: 1em;
   line-height: 0;
   position: relative;
+  line-height: 2em;
+  max-width: 50%;
 }
 
-#chat div:nth-child(odd):before {
+#chat > div:nth-child(odd) div:before {
   content: "";
   width: 0px;
   height: 0px;
@@ -140,11 +161,11 @@ article {
   border-right: 10px solid transparent;
   border-top: 10px solid #000000;
   border-bottom: 10px solid transparent;
-  right: 22em;
-  top: 4.5em;
+  left: 1em;
+  bottom: -1.25em;
 }
 
-#chat div:nth-child(odd):after {
+#chat > div:nth-child(odd) div:after {
   content: "";
   width: 0px;
   height: 0px;
@@ -153,22 +174,27 @@ article {
   border-right: 7px solid transparent;
   border-top: 7px solid #fff;
   border-bottom: 7px solid transparent;
-  right: 22.2em;
-  top: 4.4em;
+  left: 1.2em;
+  bottom: -0.7em;
 }
 
-#chat div:nth-child(even) {
-  float: right;
-  color: white;
+#chat > div:nth-child(even) div {
   background-color: black;
-  border: black solid 0.25em;
+  color: white;
+  float: right;
   border-radius: 1em;
   padding: 1em;
   line-height: 0;
   position: relative;
+  line-height: 2em;
+  max-width: 50%;
 }
 
-#chat div:nth-child(even):before {
+#chat div h1 {
+  margin: 0;
+}
+
+#chat > div:nth-child(even) div:before {
   content: "";
   width: 0px;
   height: 0px;
@@ -177,6 +203,41 @@ article {
   border-left: 10px solid transparent;
   border-top: 10px solid rgb(0, 0, 0);
   border-bottom: 10px solid transparent;
-  right: 3em;
-  top: 4.5em;
+  right: 1em;
+  bottom: -1em;
+}
+
+#input-field {
+  position: absolute;
+  width: auto;
+}
+
+#input > *, #input {
+  display: flex;
+  font-family: text_font;
+  gap: 1em;
+}
+
+#send {
+  background-color: black;
+  border-radius: 0.25em;
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 0.25em;
+  text-align: center;
+  padding-top: 0.4em;
+  transition: 0.1s;
+}
+
+#send:hover {
+  background-color: #727071;
+  cursor: pointer;
+}
+
+#user-input {
+  border: 0.25em solid black;
+  border-radius: 0.25em;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }/*# sourceMappingURL=styles.css.map */
