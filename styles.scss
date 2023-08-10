@@ -3,6 +3,11 @@
     src: url(/contents/fonts/font.ttf);
 }
 
+@font-face {
+    font-family: text_font_light;
+    src: url(/contents/fonts/font_light.ttf);
+}
+
 $background_color: #727071;
 
 html, body, section {
@@ -13,6 +18,10 @@ html{
     background-color: $background_color;
     font-family: text_font;
     scroll-snap-type: y mandatory;
+}
+
+*{
+    transition: 0.25s;
 }
 
 body{
@@ -29,7 +38,19 @@ section {
 
     padding: 1em;
     overflow: hidden;
-  }
+}
+
+hr{
+    border-color: black;
+    border-width: 0.05em; 
+    border-style: solid;
+    margin: 0 2em;
+}
+
+h4{
+    font-family: text_font_light;
+    margin-top: 0;
+}
 
 // Header
 
@@ -49,24 +70,47 @@ article{
 
 // Malen
 
-#malen div{
-    $grid-size: 25px;
-    background-size: $grid-size $grid-size;
-    background-image:
-        linear-gradient(to right, black 0.2em, transparent 1px),
-        linear-gradient(to bottom, black 0.2em, transparent 1px);
-    background-position: 1vw;
-    box-sizing: content-box;
-    height: 75%;
-    margin: 3em;
-    margin-top: 10em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#malen *{
+    transition: 0.1s;
 }
 
-#malen div img{
-    height: 50vh;
+.board {
+    margin-top: 7.5em;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(21, calc(80vmin / 21));
+    grid-template-rows: repeat(23, calc(80vmin / 21));
+    grid-gap: 0.1em;
+    background-color: black;
+}
+
+.cell {
+    background-color: white;
+}
+
+.filled {
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.controls{
+    position: relative;
+    float: right;
+    margin-top: 1em;
+    margin-right: 1em;
+    font-family: text_font;
+    text-transform: uppercase;
+    border: 0.1em solid black;
+    font-size: 2em;
+    border-radius: 0.25em;
+    padding-top: 0.25em;
+    transition: 0.25s !important;
+}
+
+.controls:hover{
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
 }
 
 // Portrait
@@ -85,9 +129,6 @@ article{
     box-shadow: -0.5em 0.5em rgba($color: #000000, $alpha: 0.7);
     margin: auto;
     display: block;
-}
-
-#portrait > div:nth-child(odd){
     margin-top: 6em;
 }
 
@@ -127,18 +168,37 @@ article{
 
 #portrait h1{
    margin: 0;
-   text-align: right;
    font-size: 6em;
 }
 
+.title-mobile{
+    display: none;
+}
+
 // Kontakt
+
+#kontakt .title-desktop{
+    position: absolute;
+    float: right;
+
+    top: -0.5em;
+    right: 0.5em;
+
+    font-size: 6em;
+}
+
+#kontakt .title-mobile{
+    padding: 1em;
+    margin: 0;
+    font-size: 4em;
+}
 
 #kontakt{
     padding: 1.5em;
     position: relative;  
 }
 
-#kontakt > div{
+#kontakt > div:first-of-type{
     margin-top: 10em;
 }
 
@@ -146,6 +206,11 @@ article{
     margin: 1em;
     text-transform: uppercase;
     overflow: auto;
+    word-wrap: break-word;
+}
+
+.messages h1{
+    hyphens: auto;
 
 }
 
@@ -154,15 +219,13 @@ article{
 }
 
 #chat{
-    overflow-y: scroll;
     overflow-x: hidden;
-    max-height: 70vh;
     padding: 1em;
 }
 
 // bot
 
-#chat > div:nth-child(odd) > div{
+.bot > div{
     float: left;
     border: black solid 0.25em;
     border-radius: 1em;
@@ -173,7 +236,7 @@ article{
     max-width: 50%;
 }
 
-#chat > div:nth-child(odd) div:before{
+.bot div:before{
     content: "";
     width: 0px;
     height: 0px;
@@ -186,7 +249,7 @@ article{
     bottom: -1.25em;
   }
 
-  #chat > div:nth-child(odd) div:after{
+.bot div:after{
     content: "";
     width: 0px;
     height: 0px;
@@ -201,11 +264,16 @@ article{
 
 // user
 
-#chat > div:nth-child(even) div{
+.user{
+    overflow: hidden;
+}
+
+.user div{
     background-color: black;
     color: white;
     float: right;
 
+    max-height: 20em;
     border-radius: 1em;
     padding: 1em;
     line-height: 0;
@@ -218,7 +286,7 @@ article{
     margin: 0;
 } 
 
-#chat > div:nth-child(even) div:before{
+.user div:before{
     content: "";
     width: 0px;
     height: 0px;
@@ -233,18 +301,27 @@ article{
 
 // Input
 
-#input-field{
-    position: absolute;
-    width: auto;
-}
-
 #input > *, #input{
     display: flex;
     font-family: text_font;
     gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-chat{
+    position: absolute;
+    bottom: 3em;
+    left: 0;
+    width: 100%;
+}
+
+#input{
+    padding: 2em;
 }
 
 #send{
+    flex: 1;
     background-color: black;
     
     border-radius: 0.25em;
@@ -264,10 +341,205 @@ article{
 }
 
 #user-input{
-    border: 0.25em solid black;
+    flex: 3;
+
+    border: 0.1em solid black;
     border-radius: 0.25em;
 
     font-size: 1.5em;
     text-transform: uppercase;
+    line-height: 2em;
 }
 
+#input-email hr{
+    margin-bottom: 1em;
+}
+
+#input-email{
+    padding: 2em;
+    padding-top: 1em;
+    opacity: 0;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }   
+}
+
+@keyframes hide {
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    100%{
+        height: 0px;
+        visibility: hidden;
+    }
+}
+
+#input-email input{
+    border: 0.1em solid black;
+    border-radius: 0.25em;
+    font-size: 1.5em;
+    line-height: 2em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    font-family: text_font;
+}
+
+#input-email input[type="submit"]{
+    background-color: black;
+
+    border-radius: 0.25em;
+    border: none;
+
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.1s;
+}
+
+#input-email input[type="submit"]:hover{
+    background-color: #727071;
+    cursor: pointer;
+}
+
+// Portfolio
+
+#portfolio .title-desktop{
+    text-align: right;
+
+    position: absolute;
+    
+    top: -0.5em;
+    right: 0.5em;
+
+    font-size: 6em;
+}
+
+#portfolio .title-mobile{
+    padding: 1em;
+    margin: 0;
+    font-size: 4em;
+}
+
+#portfolio{
+    padding: 1.5em;
+    position: relative;
+}
+
+#portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 17.5em;
+}
+
+.portfolio-item{
+    padding: 1em;
+    position: relative;
+}
+
+.portfolio-item div div{
+    margin-top: 0.5em;
+    border: 0.1em solid black;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-radius: 0.5em;
+    max-height: 5em;
+
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.portfolio-item:hover div{
+    max-height: 100em;
+}
+
+.portfolio-item div p:first-of-type{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: 0;
+}
+
+.portfolio-item div img{
+    width: 100%;
+    height: 10em;
+}
+
+.portfolio-item > div > *{
+    box-shadow: -0.5em 0.5em rgba($color: #000000, $alpha: 0.7);
+}
+
+@media (max-width: 800px) {
+    body{
+        padding: 1em;
+    }
+
+    #portrait{
+        display: block;
+        padding-bottom: 1em;
+    }
+    
+    #portrait div{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #portrait img{
+        margin: auto;
+    }
+
+    .title-desktop{
+        display: none;
+    }
+
+    .title-mobile{
+        display: block;
+        text-align: center;
+    }
+
+    section{
+        background-color: white;
+
+        scroll-snap-align: none;
+        scroll-snap-stop: none;
+
+        padding: 1em;
+        overflow: visible;
+
+        padding: 0;
+    }
+
+    #malen{
+        display: none;
+    }
+
+    header, header h1{
+        padding: 0;
+        position: relative;
+        background-color: white;
+        margin: auto;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    html{
+        block-size: auto;
+    }
+
+    #chat{
+        margin-top: 0 !important;
+    }
+}
