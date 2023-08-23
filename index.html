@@ -1,180 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
-        <title>JUANITO VISION</title>
+        <title>Joel Erni</title>
+        <meta name="description" content="E-Portfolio von Joel Erni">        
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <div id="logo">
-                <h1>JUANITO<br>&nbsp;&nbsp;VISION</h1>
-            </div>
-        </header>
-        <section id="malen">
-            <button class="controls" onclick="resetBoard()">Reset</button>
-        
-            <div class="board" onclick="fillSpace(event)"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell filled"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div>
-        </section>
-        <section id="portrait">
-                <div>
-                    <h1 class="title-mobile">PORTRAIT</h1>
-                    <img src="/contents/images/head_cropped.jpg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <main>
+            <section id="intro">
+                <div id="intro-container">
+                    <h1>Joel Pascal Erni</h1>
+                    <hr>
+                    <h1>Informatiker Applikationsentwickler</h1>
                 </div>
                 <div>
-                    <h1 class="title-desktop">PORT-<br>RAIT</h1>
-                    <div id="buttons">
-                        <a href="">
-                            <button>
-                                <p style="text-align:left;">
-                                    VIDEOJOURNALIST
-                                    <span style="float:right;">
-                                        23~
-                                    </span>
-                                </p>
-                                <h4>TELE 1</h4>
-                            </button>
-                        </a>
-                        <a href="">
-                            <button>
-                                <p style="text-align:left;">
-                                    VIDEOJOURNALIST
-                                    <span style="float:right;">
-                                        22-23
-                                    </span>
-                                </p>
-                                <h4>RADIO 3FACH</h4>
-                            </button>
-                        </a>
-                        <a href="">
-                            <button>
-                                <p style="text-align:left;">
-                                    VIDEOPRODUZENT
-                                    <span style="float:right;">
-                                        21-23
-                                    </span>
-                                </p>
-                                <h4>RADIO 3FACH</h4>
-                            </button>
-                        </a>
-                        <a href="">
-                            <button>
-                                <p style="text-align:left;">
-                                    RADIOMODERATOR
-                                    <span style="float:right;">
-                                        19-23
-                                    </span>
-                                </p>
-                                <h4>RADIO 3FACH</h4>
-                            </button>
-                        </a>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+                        <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+                    </svg>
                 </div>
-        </section>
-        <section id="kontakt">
-            <h1 class="title-desktop">KONTAKT</h1>
-            <h1 class="title-mobile">KONTAKT</h1>
-            <div id="chat">
-                <div class="messages bot emailhide">
-                    <div>
-                        <h1>Wie kann ich helfen?</h1>
-                    </div>
-                </div>
-            </div>
-            <div id="input-field">
-                    <div id="input-chat">
-                        <hr class="emailhide">
-                        <form id="input" class="emailhide" onsubmit="chat_send(); return false">
-                            <input id="user-input" type="text"  class="emailhide">
-                            <input type="submit" id="send" value="SENDEN"  class="emailhide">
-                        </form>
-                    </div>
-                    <form id="input-email" onsubmit="sendMail(); return false">
-                        <hr>
-                        <div>
-                            <input type="text" placeholder="BETREFF">
-                        </div>
-                        <div>
-                            <input type="text" placeholder="NAME">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="E-MAIL">
-                        </div>
-                        <div>
-                            <input type="submit" value="E-MAIL SENDEN">
-                        </div>
-                    </form>
-                </form>
-            </div>
-        </section>
-        <section id="portfolio">
-            <h1 class="title-desktop">PORT-&nbsp;<br>FOLIO</h1>
-            <h1 class="title-mobile">PORT-&nbsp;<br>FOLIO</h1>
-            <div id="portfolio-container">
-                <div class="portfolio-item">
-                    <div>
-                        <img src="/contents/images/head_cropped.jpg">
-                        <div>
-                            <p style="text-align:left;">
-                                Videotitel
-                                <span style="float:right;">
-                                    1234567
-                                </span>
-                            </p>
-                            <h4>Radio 3Fach</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div>
-                        <img src="/contents/images/head_cropped.jpg">
-                        <div>
-                            <p style="text-align:left;">
-                                Videotitel
-                                <span style="float:right;">
-                                    1234567
-                                </span>
-                            </p>
-                            <h4>Radio 3Fach</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div>
-                        <img src="/contents/images/head_cropped.jpg">
-                        <div>
-                            <p style="text-align:left;">
-                                Videotitel
-                                <span style="float:right;">
-                                    1234567
-                                </span>
-                            </p>
-                            <h4>Radio 3Fach</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div>
-                        <img src="/contents/images/head_cropped.jpg">
-                        <div>
-                            <p style="text-align:left;">
-                                Videotitel
-                                <span style="float:right;">
-                                    1234567
-                                </span>
-                            </p>
-                            <h4>Radio 3Fach</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </section>
+            </section>
+        </main>
     </body>
-    <script src="chat.js"></script>
-    <script src="malen.js"></script>
 </html>
