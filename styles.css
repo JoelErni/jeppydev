@@ -43,18 +43,12 @@ main {
 
 #intro {
   height: 100vh;
-  background: radial-gradient(ellipse at top right, #F3AD71 -50%, transparent 50%), radial-gradient(ellipse at bottom left, #F3ADDD -50%, transparent 50%), radial-gradient(ellipse at bottom right, #0BB17D -50%, transparent 50%);
-  animation: intro-background-animation 10s infinite;
+  background: radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200% 200%;
+  animation: 30s intro-background-animation 0.1s infinite ease;
 }
 
-@keyframes intro-background-animation {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100em 100em;
-  }
-}
+@keyframes intro-background-animation {}
 #intro-container {
   padding-top: 33vh;
 }
