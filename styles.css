@@ -19,6 +19,7 @@ html, body, main, section {
 
 html {
   color: #eaf3f4;
+  background-color: white;
 }
 
 h1 {
@@ -30,6 +31,7 @@ body {
   background-image: radial-gradient(rgba(0, 0, 0, 0.066) 0.05em, transparent 0);
   background-size: 0.5em 0.5em;
   background-position: -19px -19px;
+  margin: 0.5em;
 }
 
 main {
@@ -41,14 +43,45 @@ main {
   background-color: #181818;
 }
 
-#intro {
-  height: 100vh;
-  background: radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.1), transparent);
-  background-size: 200% 200%;
-  animation: 30s intro-background-animation 0.1s infinite ease;
+section {
+  padding: 1em;
 }
 
-@keyframes intro-background-animation {}
+#intro {
+  height: 100vh;
+  background: #181818;
+  background-size: 200% 200%;
+}
+
+#intro-name-cursor {
+  animation: intro-cursor 1s steps(1, end) infinite;
+}
+
+@keyframes intro-cursor {
+  0% {
+    color: rgba(0, 0, 0, 0);
+  }
+  50% {
+    color: white;
+  }
+}
+#intro-name-title {
+  color: transparent;
+}
+
+.intro-show {
+  animation: intro-show 0.75s ease forwards;
+}
+
+@keyframes intro-show {
+  0% {
+    transform: translateX(1em);
+    color: transparent;
+  }
+  100% {
+    color: #3F4346;
+  }
+}
 #intro-container {
   padding-top: 33vh;
 }
@@ -65,8 +98,7 @@ main {
 }
 
 #intro-container h1:nth-of-type(even) {
-  font-size: 3.5em;
-  color: #666666;
+  font-size: 3.75em;
 }
 
 #intro-container hr {
@@ -81,7 +113,7 @@ main {
   position: absolute;
   left: 50%;
   right: 50%;
-  bottom: 5%;
+  bottom: 0%;
   animation: arrow-down 2s infinite;
 }
 
