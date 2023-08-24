@@ -20,6 +20,7 @@ html, body, main, section {
 html {
   color: #F9F9F9;
   background-color: #F9F9F9;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -138,6 +139,7 @@ main {
   background-color: #F9F9F9;
   color: #181818;
   padding: 5em;
+  height: calc(100vh - 10em);
 }
 
 #me h1 {
@@ -155,8 +157,8 @@ main {
   display: block;
   margin: auto;
   filter: blur(0.05em);
-  height: 12.33em;
-  width: 10em;
+  height: 49.32em;
+  width: 40em;
   background-size: cover;
   background-image: linear-gradient(to right, transparent 50%, #F9F9F9), url(/content/image/joel_ol.png);
 }

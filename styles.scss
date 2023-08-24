@@ -30,6 +30,8 @@ html, body, main, section {
 html{
     color: $pc5;
     background-color: $pc5;
+
+    overflow-x: hidden;
 }
 
 h1{
@@ -168,6 +170,7 @@ main{
     background-color: $pc5;
     color: $pc2;
     padding: 5em;
+    height: calc(100vh - 10em);
 }
 
 #me h1{
@@ -186,7 +189,7 @@ main{
     margin: auto;
     filter: blur(0.05em);
 
-    $portrait-size: 10em;
+    $portrait-size: 40em;
     height: calc($portrait-size * 1.233);
     width: $portrait-size;
     background-size: cover;
