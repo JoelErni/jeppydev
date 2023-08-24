@@ -65,16 +65,23 @@ main {
   color: transparent;
 }
 
-.intro-show {
-  animation: intro-show 0.75s ease forwards;
+.show {
+  animation: show 0.75s ease forwards;
 }
 
-@keyframes intro-show {
+.reveal {
+  opacity: 0;
+  transition: 1s;
+}
+
+@keyframes show {
   0% {
     transform: translateX(1em);
+    opacity: 0;
     color: transparent;
   }
   100% {
+    opacity: 1;
     color: #3F4346;
   }
 }
@@ -139,7 +146,7 @@ main {
   background-color: #F9F9F9;
   color: #181818;
   padding: 5em;
-  height: calc(100vh - 10em);
+  height: calc(100vh - 7.5em);
 }
 
 #me h1 {
@@ -157,9 +164,10 @@ main {
   display: block;
   margin: auto;
   filter: blur(0.05em);
-  height: 49.32em;
-  width: 40em;
+  height: 49.32rem;
+  width: 40rem;
   background-size: cover;
+  background-position: center;
   background-image: linear-gradient(to right, transparent 50%, #F9F9F9), url(/content/image/joel_ol.png);
 }
 
@@ -169,10 +177,11 @@ main {
   align-items: center;
 }
 
-#me-container div:nth-of-type(even) {
+#me-container > div:nth-of-type(even) {
   flex: 1;
 }
 
-#me-container div:nth-of-type(odd) {
-  flex: 1;
+#me-container > div:nth-of-type(odd) {
+  flex: 3;
+  padding: 5em;
 }/*# sourceMappingURL=styles.css.map */
