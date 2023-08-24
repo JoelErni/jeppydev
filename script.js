@@ -5,7 +5,7 @@ const show_name = async () => {
     var wrongName = 'Joeöl Pascal Wrni';
     var NAMEELEMENT = document.getElementById('intro-name');
     for (var i = 0; i < wrongName.length + 1; i++){
-        await delay(50);            
+        await delay(25 + 50 * Math.random());            
         NAMEELEMENT.innerText = wrongName.slice(0, i);
     }
 
@@ -14,11 +14,11 @@ const show_name = async () => {
     for (var i = 0; i < wrongName.length - 3; i++){
                    
         NAMEELEMENT.innerText = wrongName.slice(0, -i);
-        await delay(50); 
+        await delay(25 + 50 * Math.random()); 
     }
 
     for (var i = 3; i < name.length + 1; i++){
-        await delay(50);            
+        await delay(25 + 50 * Math.random());            
         NAMEELEMENT.innerText = name.slice(0, i);
     }
 
