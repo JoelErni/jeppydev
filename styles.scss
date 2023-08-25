@@ -19,7 +19,7 @@ $pc5: #F9F9F9;
 
 //fonts
 @font-face {
-    font-family: title-font;
+    font-family: default-font;
     src: url(/content/font/Louis\ George\ Cafe\ Light.ttf);
 }
 
@@ -32,10 +32,8 @@ html{
     background-color: $pc5;
 
     overflow-x: hidden;
-}
 
-h1{
-    font-family: title-font;
+    font-family: default-font;
 }
 
 body{
@@ -54,6 +52,26 @@ main{
     display: block;
 
     background-color: $pc2;
+}
+
+h1{
+    font-size: 4em;
+    margin: 0;
+}
+
+h2{
+    font-size: 3em;
+    margin: 0;
+}
+
+h3{
+    font-size: 2em;
+    margin: 0;
+}
+
+p{
+    font-size: 1.5em;
+    margin: 0;
 }
 
 #intro{
@@ -113,7 +131,6 @@ main{
 }
 
 #intro-container h1{
-    font-size: 4em;
     margin: 0;
     text-align: center;
 }
@@ -128,7 +145,7 @@ main{
 }
 
 #intro-container hr{
-    border: 0.125em $pc5 solid;
+    border: 0.15em $pc5 solid;
     border-radius: 1em;
     width: 55em;
 }
@@ -136,9 +153,6 @@ main{
 #intro-footer-wave{
     position: absolute !important;
     bottom: 0;
-    right: 50;
-    left: 50;
-
 
     width: calc(100% - 1em);
 }
@@ -176,33 +190,20 @@ main{
 #me{
     background-color: $pc5;
     color: $pc2;
-    padding: 5em;
-    height: calc(100vh - 7.5em);
+    
+    $me-padding: 5em; 
+    padding-left: $me-padding;
+    padding-right: $me-padding;
 }
 
-#me h1{
+#me p{
     font-size: 5em;
     text-align: center;
     margin: 0;
 }
 
-#me hr{
-    border: 0.125em $pc2 solid;
-    border-radius: 1em;
-}
-
 #portrait{
-    display: block;
-    margin: auto;
-    filter: blur(0.05em);
-
-    $portrait-size: 40rem;
-    height: calc($portrait-size * 1.233);
-    width: $portrait-size;
-    background-size: cover;
-    background-position: center;
-    background-image:   linear-gradient(to right ,transparent 50%, $pc5),
-                        url(/content/image/joel_ol.png);
+    width: 100%;
 }
 
 #me-container{
@@ -212,11 +213,49 @@ main{
 }
 
 #me-container > div:nth-of-type(even){
-    flex: 1;
+    flex: 2;
 
 }
 
 #me-container > div:nth-of-type(odd){
     flex: 3;
+    padding-right: 5em;
+    padding-right: 5em;
+}
+
+// more me
+
+#more-me hr{
+    border: 0.15em solid $pc5;
+}
+
+#more-me{
+    position: relative;
+}
+
+#more-me-container{
     padding: 5em;
+    padding-top: 10em;
+}
+
+#more-me-wave{
+    position: absolute !important;
+    top: 0%;
+    left: 50;
+    right: 50;
+}
+
+.more-me-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 2em;
+}
+
+.more-me-personal-item h2{
+    padding-bottom: 5em;
+}
+
+.more-me-personal-item p{
+    font-size: 1.75em;
 }
