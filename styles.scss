@@ -1,4 +1,4 @@
-$pc1: #3F4346;
+$pc1: #505050;
 $pc2: #202020;
 $pc3: #5c0068;
 $pc4: #0048ac;
@@ -54,6 +54,16 @@ main{
     background-color: $pc2;
 }
 
+section:nth-of-type(even){
+    background-color: $pc2;
+    color: $pc5;
+}
+
+section:nth-last-of-type(odd){
+    background-color: $pc5;
+    color: $pc2;   
+}
+
 h1{
     font-size: 4em;
     margin: 0;
@@ -74,12 +84,17 @@ p{
     margin: 0;
 }
 
+hr{
+    border: 0.15em $pc5 solid;
+    border-radius: 1em;
+}
+
+.svg-wave{
+    fill: $pc5;
+}
+
 #intro{
     height: calc(100vh - 2em);
-
-    background: $pc2;
-    $background-intro-size: 200%;
-    background-size: $background-intro-size $background-intro-size;
 }
 
 #intro-name-cursor{
@@ -98,7 +113,8 @@ p{
 }
 
 #intro-name-title{
-    color: transparent;
+    color: $pc1;
+    opacity: 0;
 }
 
 .show{
@@ -114,7 +130,6 @@ p{
     0%{
         transform: translateX(1em);
         opacity: 0;
-        color: transparent;
     }
 
     100%{
@@ -144,8 +159,6 @@ p{
 }
 
 #intro-container hr{
-    border: 0.15em $pc5 solid;
-    border-radius: 1em;
     width: 55em;
 }
 
@@ -154,7 +167,6 @@ p{
     bottom: 0;
 
     width: calc(100% - 1em);
-    fill: $pc5;
 }
 
 #intro-footer-arrow{
@@ -188,7 +200,6 @@ p{
 // me
 
 #me{
-    background-color: $pc5;
     color: $pc2;
     
     $me-padding: 5em; 
@@ -221,6 +232,8 @@ p{
     flex: 3;
     padding-right: 5em;
     padding-right: 5em;
+
+    font-size: 1em;
 }
 
 // more me
@@ -235,15 +248,13 @@ p{
 
 #more-me-container{
     padding: 5em;
-    padding-top: 10em;
-    padding-bottom: 10em;
+    padding-top: 15em;
+    padding-bottom: 15em;
 }
 
 #more-me-wave{
     position: absolute !important;
     top: 0%;
-    left: 50;
-    right: 50;
 }
 
 .more-me-container{
@@ -271,8 +282,75 @@ p{
 }
 
 #me-footer-wave{
-    fill: $pc5;
-
     position: absolute !important;
     bottom: 0;
+}
+
+// Projects
+
+#projects{
+    padding: 5em;
+}
+
+#projects h1{
+    text-align: center;
+    font-size: 6.25em;
+}
+
+hr{
+    margin: 3em 0;
+    border: 0.1em $pc2 solid;
+    border-radius: 1em;
+}
+
+#project-container{
+    margin-top: 3em;
+
+    display: flex;
+    gap: 5em;
+}
+
+#projet-container div{
+    flex: 1;
+}
+
+.project-item{
+    width: 100%;
+}
+
+.project-image-container{
+    width: 35em;
+    height: calc(35em/16*9);
+    background-repeat: no-repeat;
+
+    color: $pc5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-item h2{
+    text-align: center;
+}
+
+.project-item:nth-of-type(1) .project-image-container{
+    background-image: 
+        linear-gradient(3deg,rgba(255, 115, 0, 1), rgba(234, 0, 255, 0.25)),
+        url(/content/image/projects/forza.png);
+    background-size: contain;
+}
+
+.project-item:nth-of-type(2) .project-image-container{
+    background-image: 
+        linear-gradient(3deg,rgba(93, 0, 255, 1), rgba(255, 208, 0, 0.25)),
+        url(/content/image/projects/game.png);
+    background-size: contain;
+}
+
+.project-item:nth-of-type(3) .project-image-container{
+    background-image: 
+        linear-gradient(3deg,rgb(42, 46, 52), rgba(255, 255, 255, 0.25)),
+        url(/content/image/projects/memelab.png);
+    background-size: contain;
 }

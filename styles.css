@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  background-color: #3F4346;
+  background-color: #505050;
   background-image: radial-gradient(rgba(0, 0, 0, 0.066) 0.05em, transparent 0);
   background-size: 0.5em 0.5em;
   background-position: -19px -19px;
@@ -37,6 +37,16 @@ main {
   margin: auto;
   display: block;
   background-color: #202020;
+}
+
+section:nth-of-type(even) {
+  background-color: #202020;
+  color: #F9F9F9;
+}
+
+section:nth-last-of-type(odd) {
+  background-color: #F9F9F9;
+  color: #202020;
 }
 
 h1 {
@@ -59,10 +69,17 @@ p {
   margin: 0;
 }
 
+hr {
+  border: 0.15em #F9F9F9 solid;
+  border-radius: 1em;
+}
+
+.svg-wave {
+  fill: #F9F9F9;
+}
+
 #intro {
   height: calc(100vh - 2em);
-  background: #202020;
-  background-size: 200% 200%;
 }
 
 #intro-name-cursor {
@@ -79,7 +96,8 @@ p {
   }
 }
 #intro-name-title {
-  color: transparent;
+  color: #505050;
+  opacity: 0;
 }
 
 .show {
@@ -95,7 +113,6 @@ p {
   0% {
     transform: translateX(1em);
     opacity: 0;
-    color: transparent;
   }
   100% {
     opacity: 1;
@@ -122,8 +139,6 @@ p {
 }
 
 #intro-container hr {
-  border: 0.15em #F9F9F9 solid;
-  border-radius: 1em;
   width: 55em;
 }
 
@@ -131,11 +146,10 @@ p {
   position: absolute !important;
   bottom: 0;
   width: calc(100% - 1em);
-  fill: #F9F9F9;
 }
 
 #intro-footer-arrow {
-  fill: #3F4346;
+  fill: #505050;
   height: 2.5em;
   position: absolute;
   left: 50%;
@@ -157,7 +171,6 @@ p {
   }
 }
 #me {
-  background-color: #F9F9F9;
   color: #202020;
   padding-left: 5em;
   padding-right: 5em;
@@ -187,6 +200,7 @@ p {
   flex: 3;
   padding-right: 5em;
   padding-right: 5em;
+  font-size: 1em;
 }
 
 #more-me hr {
@@ -199,15 +213,13 @@ p {
 
 #more-me-container {
   padding: 5em;
-  padding-top: 10em;
-  padding-bottom: 10em;
+  padding-top: 15em;
+  padding-bottom: 15em;
 }
 
 #more-me-wave {
   position: absolute !important;
   top: 0%;
-  left: 50;
-  right: 50;
 }
 
 .more-me-container {
@@ -232,7 +244,64 @@ p {
 }
 
 #me-footer-wave {
-  fill: #F9F9F9;
   position: absolute !important;
   bottom: 0;
+}
+
+#projects {
+  padding: 5em;
+}
+
+#projects h1 {
+  text-align: center;
+  font-size: 6.25em;
+}
+
+hr {
+  margin: 3em 0;
+  border: 0.1em #202020 solid;
+  border-radius: 1em;
+}
+
+#project-container {
+  margin-top: 3em;
+  display: flex;
+  gap: 5em;
+}
+
+#projet-container div {
+  flex: 1;
+}
+
+.project-item {
+  width: 100%;
+}
+
+.project-image-container {
+  width: 35em;
+  height: 19.6875em;
+  background-repeat: no-repeat;
+  color: #F9F9F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-item h2 {
+  text-align: center;
+}
+
+.project-item:nth-of-type(1) .project-image-container {
+  background-image: linear-gradient(3deg, rgb(255, 115, 0), rgba(234, 0, 255, 0.25)), url(/content/image/projects/forza.png);
+  background-size: contain;
+}
+
+.project-item:nth-of-type(2) .project-image-container {
+  background-image: linear-gradient(3deg, rgb(93, 0, 255), rgba(255, 208, 0, 0.25)), url(/content/image/projects/game.png);
+  background-size: contain;
+}
+
+.project-item:nth-of-type(3) .project-image-container {
+  background-image: linear-gradient(3deg, rgb(42, 46, 52), rgba(255, 255, 255, 0.25)), url(/content/image/projects/memelab.png);
+  background-size: contain;
 }/*# sourceMappingURL=styles.css.map */
