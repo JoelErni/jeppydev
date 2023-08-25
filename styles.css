@@ -36,7 +36,7 @@ main {
   width: auto;
   margin: auto;
   display: block;
-  background-color: #181818;
+  background-color: #202020;
 }
 
 h1 {
@@ -61,7 +61,7 @@ p {
 
 #intro {
   height: calc(100vh - 2em);
-  background: #181818;
+  background: #202020;
   background-size: 200% 200%;
 }
 
@@ -99,7 +99,6 @@ p {
   }
   100% {
     opacity: 1;
-    color: #3F4346;
   }
 }
 #intro-container {
@@ -132,6 +131,7 @@ p {
   position: absolute !important;
   bottom: 0;
   width: calc(100% - 1em);
+  fill: #F9F9F9;
 }
 
 #intro-footer-arrow {
@@ -158,7 +158,7 @@ p {
 }
 #me {
   background-color: #F9F9F9;
-  color: #181818;
+  color: #202020;
   padding-left: 5em;
   padding-right: 5em;
 }
@@ -190,7 +190,7 @@ p {
 }
 
 #more-me hr {
-  border: 0.15em solid #F9F9F9;
+  border: 0.1em solid #F9F9F9;
 }
 
 #more-me {
@@ -200,6 +200,7 @@ p {
 #more-me-container {
   padding: 5em;
   padding-top: 10em;
+  padding-bottom: 10em;
 }
 
 #more-me-wave {
@@ -212,13 +213,26 @@ p {
 .more-me-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 2em;
+  padding: 3em;
+  padding-top: 0;
+  gap: 2.5em;
+  margin-bottom: 1em;
 }
 
-.more-me-personal-item h2 {
+.experience {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.more-me-item h2 {
   padding-bottom: 5em;
 }
 
-.more-me-personal-item p {
+.more-me-item p {
   font-size: 1.75em;
+}
+
+#me-footer-wave {
+  fill: #F9F9F9;
+  position: absolute !important;
+  bottom: 0;
 }/*# sourceMappingURL=styles.css.map */
