@@ -266,7 +266,7 @@ a, a:visited {
 
 .project-item {
   width: auto;
-  max-width: 25em;
+  max-width: 25%;
   transition: 0.1s;
   color: #F9F9F9;
   background-color: #202020;
@@ -283,8 +283,8 @@ a, a:visited {
 }
 
 .project-image-container {
-  width: 25em;
-  height: 14.0625em;
+  width: 20vw;
+  height: 11.25vw;
   background-repeat: no-repeat;
   color: #F9F9F9;
   display: flex;
@@ -295,6 +295,7 @@ a, a:visited {
 
 .project-item h2 {
   text-align: center;
+  font-size: 125%;
 }
 
 .project-item:nth-of-type(1) .project-image-container {
@@ -327,4 +328,32 @@ a, a:visited {
 
 footer p {
   font-size: 2em;
+}
+
+@media screen and (max-width: 1000px) {
+  .more-me-container {
+    display: block;
+  }
+  .more-me-item {
+    margin-bottom: 2.5em;
+  }
+}
+@media screen and (max-width: 950px) {
+  #project-container {
+    display: block;
+  }
+  .project-item {
+    max-width: 100%;
+    margin-bottom: 5em;
+  }
+  .project-image-container {
+    width: 50vw;
+    height: 28.125vw;
+  }
+  #footer-container {
+    display: block;
+  }
+  #footer-container p {
+    margin-bottom: 5em;
+  }
 }/*# sourceMappingURL=styles.css.map */
