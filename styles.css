@@ -69,9 +69,8 @@ p {
   margin: 0;
 }
 
-hr {
-  border: 0.15em #F9F9F9 solid;
-  border-radius: 1em;
+a, a:visited {
+  color: #F9F9F9;
 }
 
 .svg-wave {
@@ -140,6 +139,9 @@ hr {
 
 #intro-container hr {
   width: 55em;
+  border: 0.15em #F9F9F9 solid;
+  margin: auto;
+  display: block;
 }
 
 #intro-footer-wave {
@@ -213,13 +215,6 @@ hr {
 
 #more-me-container {
   padding: 5em;
-  padding-top: 15em;
-  padding-bottom: 15em;
-}
-
-#more-me-wave {
-  position: absolute !important;
-  top: 0%;
 }
 
 .more-me-container {
@@ -243,11 +238,6 @@ hr {
   font-size: 1.75em;
 }
 
-#me-footer-wave {
-  position: absolute !important;
-  bottom: 0;
-}
-
 #projects {
   padding: 5em;
 }
@@ -257,7 +247,7 @@ hr {
   font-size: 6.25em;
 }
 
-hr {
+#projects hr {
   margin: 3em 0;
   border: 0.1em #202020 solid;
   border-radius: 1em;
@@ -266,7 +256,8 @@ hr {
 #project-container {
   margin-top: 3em;
   display: flex;
-  gap: 5em;
+  justify-content: space-evenly;
+  padding-bottom: 2.5em;
 }
 
 #projet-container div {
@@ -274,17 +265,32 @@ hr {
 }
 
 .project-item {
-  width: 100%;
+  width: auto;
+  max-width: 25em;
+  transition: 0.1s;
+  color: #F9F9F9;
+  background-color: #202020;
+  border-radius: 1em;
+  padding: 1em;
+  transform: rotate3d(0.5, -0.866, 0, 15deg) rotate(1deg);
+  transition: 0.5s;
+  box-shadow: 2em 4em 6em -2em rgba(0, 0, 0, 0.5), 1em 2em 3.5em -2.5em rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.1) rotate3d(0, 0, 0, 0deg) rotate(0deg);
 }
 
 .project-image-container {
-  width: 35em;
-  height: 19.6875em;
+  width: 25em;
+  height: 14.0625em;
   background-repeat: no-repeat;
   color: #F9F9F9;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .project-item h2 {
@@ -304,4 +310,21 @@ hr {
 .project-item:nth-of-type(3) .project-image-container {
   background-image: linear-gradient(3deg, rgb(42, 46, 52), rgba(255, 255, 255, 0.25)), url(/content/image/projects/memelab.png);
   background-size: contain;
+}
+
+#footer-container {
+  display: flex;
+  text-align: center;
+  padding: 5em;
+  padding-top: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-container > * {
+  flex: 1;
+}
+
+footer p {
+  font-size: 2em;
 }/*# sourceMappingURL=styles.css.map */

@@ -84,9 +84,8 @@ p{
     margin: 0;
 }
 
-hr{
-    border: 0.15em $pc5 solid;
-    border-radius: 1em;
+a, a:visited{
+    color: $pc5;
 }
 
 .svg-wave{
@@ -160,6 +159,9 @@ hr{
 
 #intro-container hr{
     width: 55em;
+    border: 0.15em $pc5 solid;
+    margin: auto;
+    display: block;
 }
 
 #intro-footer-wave{
@@ -248,13 +250,6 @@ hr{
 
 #more-me-container{
     padding: 5em;
-    padding-top: 15em;
-    padding-bottom: 15em;
-}
-
-#more-me-wave{
-    position: absolute !important;
-    top: 0%;
 }
 
 .more-me-container{
@@ -281,11 +276,6 @@ hr{
     font-size: 1.75em;
 }
 
-#me-footer-wave{
-    position: absolute !important;
-    bottom: 0;
-}
-
 // Projects
 
 #projects{
@@ -297,7 +287,7 @@ hr{
     font-size: 6.25em;
 }
 
-hr{
+#projects hr{
     margin: 3em 0;
     border: 0.1em $pc2 solid;
     border-radius: 1em;
@@ -307,7 +297,9 @@ hr{
     margin-top: 3em;
 
     display: flex;
-    gap: 5em;
+    justify-content: space-evenly;
+
+    padding-bottom: 2.5em;
 }
 
 #projet-container div{
@@ -315,12 +307,40 @@ hr{
 }
 
 .project-item{
-    width: 100%;
+    width: auto;
+    max-width: 25em;
+    transition: 0.1s;
+    color: $pc5;
+
+    background-color: $pc2;
+    border-radius: 1em;
+    
+    padding: 1em;
+
+    transform:
+        rotate3d(.5,-.866,0,15deg)
+        rotate(1deg);
+
+        transition: 0.5s;
+
+    box-shadow:
+        2em 4em 6em -2em rgba(0,0,0,.5),
+        1em 2em 3.5em -2.5em rgba(0,0,0,.5);
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
 }
 
+.project-item:hover {
+    transform:
+        scale(1.1)
+      rotate3d(0,0,0,0deg)
+      rotate(0deg);
+  }
+
 .project-image-container{
-    width: 35em;
-    height: calc(35em/16*9);
+    width: 25em;
+    height: calc(25em/16*9);
     background-repeat: no-repeat;
 
     color: $pc5;
@@ -328,7 +348,11 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: auto;
 }
+
+
 
 .project-item h2{
     text-align: center;
@@ -353,4 +377,26 @@ hr{
         linear-gradient(3deg,rgb(42, 46, 52), rgba(255, 255, 255, 0.25)),
         url(/content/image/projects/memelab.png);
     background-size: contain;
+}
+
+//footer
+
+
+#footer-container{
+    display: flex;
+    text-align: center;
+
+    padding: 5em;
+    padding-top: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-container > *{
+    flex: 1;
+}
+
+footer p{
+    font-size: 2em;
 }
