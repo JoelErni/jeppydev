@@ -13,6 +13,10 @@
   font-family: default-font;
   src: url(/content/font/Louis\ George\ Cafe\ Light.ttf);
 }
+.mobile {
+  display: none;
+}
+
 html, body, main, section {
   margin: 0;
 }
@@ -117,28 +121,28 @@ a, a:visited {
     opacity: 1;
   }
 }
-#intro-container {
+.intro-container {
   position: absolute;
   top: 35%;
   width: 100%;
 }
 
-#intro-container h1 {
+.intro-container h1 {
   margin: 0;
   text-align: center;
 }
 
-#intro-container h1:nth-of-type(odd) {
+.intro-container h1:nth-of-type(odd) {
   line-height: 100%;
-  font-size: 8em;
+  font-size: 5.75vw;
 }
 
-#intro-container h1:nth-of-type(even) {
-  font-size: 3.5em;
+.intro-container h1:nth-of-type(even) {
+  font-size: 2.4vw;
 }
 
-#intro-container hr {
-  width: 55em;
+.intro-container hr {
+  width: 38vw;
   border: 0.15em #F9F9F9 solid;
   margin: auto;
   display: block;
@@ -185,7 +189,9 @@ a, a:visited {
 }
 
 #portrait {
-  width: 100%;
+  width: 30vw;
+  margin: auto;
+  display: block;
 }
 
 #me-container {
@@ -202,7 +208,7 @@ a, a:visited {
   flex: 3;
   padding-right: 5em;
   padding-right: 5em;
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 #more-me hr {
@@ -331,14 +337,40 @@ footer p {
 }
 
 @media screen and (max-width: 1000px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .intro-container {
+    top: 25%;
+  }
+  .intro-container h1 {
+    font-size: 25vw !important;
+  }
+  #me {
+    padding-top: 5em;
+  }
+  #me-container {
+    display: block;
+  }
   .more-me-container {
     display: block;
   }
   .more-me-item {
     margin-bottom: 2.5em;
   }
-}
-@media screen and (max-width: 950px) {
+  .show {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transition: 0s;
+  }
+  #intro-name-title {
+    opacity: 1;
+  }
   #project-container {
     display: block;
   }

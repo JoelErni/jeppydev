@@ -11,9 +11,9 @@ const show_name = async () => {
 
     await delay(1500)
 
-    for (var i = 0; i < wrongName.length - 3; i++){
+    for (var i = 0; i < wrongName.length - 2; i++){
                    
-        NAMEELEMENT.innerText = wrongName.slice(0, -i);
+        NAMEELEMENT.innerText = wrongName.slice(0, -i - 1);
         await delay(25 + 50 * Math.random()); 
     }
 
