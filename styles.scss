@@ -97,8 +97,7 @@ a, a:visited{
 }
 
 #intro{
-    height: 99vh;
-    background-color: red !important;
+    height: calc(100vh - 5em);
 }
 
 #intro-name-cursor{
