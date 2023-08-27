@@ -45,11 +45,5 @@ var reveals = document.querySelectorAll(".reveal");
 }
 
 window.addEventListener("scroll", reveal);
-js
-
-addEventListener("resize", () => {
-    document.getElementById("intro").style.height = window.innerHeight; 
-    }
-);
 
 show_name();

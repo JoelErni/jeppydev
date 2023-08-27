@@ -82,7 +82,7 @@ a, a:visited {
 }
 
 #intro {
-  height: 100vh;
+  height: 100dvh;
 }
 
 #intro-name-cursor {
