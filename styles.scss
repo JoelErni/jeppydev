@@ -97,7 +97,7 @@ a, a:visited{
 }
 
 #intro{
-    height: 100dvh;
+    height: clac(100dvh - 0.5em);
 }
 
 #intro-name-cursor{
