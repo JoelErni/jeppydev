@@ -107,6 +107,10 @@ a, a:visited {
   flex: 1;
 }
 
+#loader p {
+  color: #505050;
+}
+
 #intro {
   height: calc(100vh - 2em);
 }
