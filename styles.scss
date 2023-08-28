@@ -134,6 +134,20 @@ a, a:visited{
     color: $pc1;
 }
 
+.hide-loader{
+    animation: hide-loader 1s ease forwards;
+}
+
+@keyframes hide-loader {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
 //Intro
 
 #intro{

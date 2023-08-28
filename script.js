@@ -46,12 +46,12 @@ var reveals = document.querySelectorAll(".reveal");
 
 function showPage(){
     document.getElementById('main').style.display = 'block';
-    document.getElementById('loader').style.display = 'none';
+    document.getElementById('loader').classList.add('hide-loader');
+    showName();
 }
 
 window.addEventListener("load", function () {
     showPage();
-    showName();
 });
 
 window.addEventListener("scroll", reveal);
