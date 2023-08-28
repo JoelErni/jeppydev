@@ -81,8 +81,33 @@ a, a:visited {
   fill: #F9F9F9;
 }
 
+#loader {
+  background-color: black;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 99;
+}
+
+#loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader-item {
+  flex: 1;
+}
+
 #intro {
-  height: calc(100vh - 1em);
+  height: calc(100vh - 2em);
 }
 
 #intro-name-cursor {
@@ -162,7 +187,7 @@ a, a:visited {
   right: 50%;
   bottom: 0%;
   animation: arrow-down 2s infinite;
-  z-index: 99;
+  z-index: 98;
 }
 
 @keyframes arrow-down {

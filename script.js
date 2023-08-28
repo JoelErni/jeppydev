@@ -44,6 +44,15 @@ var reveals = document.querySelectorAll(".reveal");
     }
 }
 
+function showPage(){
+    document.getElementById('main').style.display = 'block';
+    document.getElementById('loader').style.display = 'none';
+}
+
+window.addEventListener("load", function () {
+    showPage();
+});
+
 window.addEventListener("scroll", reveal);
 
 show_name();
