@@ -47,6 +47,7 @@ var reveals = document.querySelectorAll(".reveal");
 function showPage(){
     document.getElementById('main').style.display = 'block';
     document.getElementById('loader').classList.add('hide-loader');
+    document.getElementById('loader-container').classList.add('hide-loader');
     showName();
 }
 
