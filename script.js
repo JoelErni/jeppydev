@@ -1,6 +1,6 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-const show_name = async () => {
+const showName = async () => {
     var name = 'Joel Pascal Erni';
     var wrongName = 'Joeöl Pascal Wrni';
     var NAMEELEMENT = document.getElementById('intro-name');
@@ -51,8 +51,7 @@ function showPage(){
 
 window.addEventListener("load", function () {
     showPage();
+    showName();
 });
 
 window.addEventListener("scroll", reveal);
-
-show_name();
