@@ -82,6 +82,7 @@ a, a:visited {
 }
 
 #loader {
+  color: white;
   background-color: black;
   position: fixed;
   margin-left: auto;
