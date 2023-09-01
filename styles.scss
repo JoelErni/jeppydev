@@ -154,6 +154,44 @@ a, a:visited{
     }
 }
 
+#loader-dots{
+    position: absolute;
+}
+
+#loader button{
+    border: 0.1em solid $pc5;
+    border-radius: 0.1em;
+
+    background-color: transparent;
+
+    color: $pc5;
+
+    transition: 0.1s;
+    padding: 0.25em;
+}
+
+#loader button:hover{
+    cursor:pointer;
+
+    background-color: #202020;
+
+    transform: scale(1.05);
+}
+
+#loader svg{
+    width: 5em;
+
+    margin: auto;
+    display: block;
+}
+
+#loader-skip{
+    position: absolute;
+
+    width: 100%;
+    bottom: 2.5em;
+}
+
 //Intro
 
 #intro{
